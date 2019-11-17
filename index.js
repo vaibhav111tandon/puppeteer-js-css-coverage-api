@@ -53,7 +53,7 @@ app.post('/',async (req, res) => {
 
   await browser.close();
 
-  res.status("200").send([
+  res.status(200).send([
     ...calculateUsedBytes('js', jsCoverage),
     ...calculateUsedBytes('css', cssCoverage)
   ]);
